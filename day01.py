@@ -24,3 +24,16 @@ data = {
 df = pd.DataFrame(data)
 print(df)
 
+
+# Little Exercise
+numbers = pd.Series([5, 4, 11, 25, 22])
+print(numbers)
+
+friends = {
+    "Name": ["Anna", "Bob", "Charlie"],
+    "Age": [23, 30, 35],
+    "Color": ["Blue", "Yellow", "Red"]
+}
+
+friends_df = pd.DataFrame(friends)
+print(friends_df)
