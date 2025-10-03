@@ -18,3 +18,24 @@ df[df['sepal_length'] > 5.0]
 
 # Multiple conditions (AND / OR)
 df[(df['sepal_length'] > 5.0) & (df['species'] == 'setosa')]
+
+
+import pandas as pd
+
+url = "https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv"
+df = pd.read_csv(url)
+
+# Select a single column
+print(df['species'].head())
+
+# Select multiple columns
+print(df[['sepal_length', 'sepal_width']].head())
+
+# Select rows by position
+print(df.iloc[10:15])
+
+# Select rows by condition
+print(df[df['petal_length'] > 1.5].head())
+
+# Select specific rows & columns
+print(df.loc[0:4, ['sepal_length', 'species']])
